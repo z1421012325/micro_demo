@@ -1,0 +1,15 @@
+syntax="proto3";
+
+service sum {
+    rpc TestSum(TestSumReq) returns (TestSumRes){}
+}
+
+
+message TestSumReq{
+    int64 number1 = 1;
+    int64 number2 = 2;
+}
+
+message TestSumRes{
+    int64 number = 1;
+}
