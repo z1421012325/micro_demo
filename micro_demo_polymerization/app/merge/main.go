@@ -1,6 +1,7 @@
 package main
 
 import (
+
 	"juhefuwu/app"
 	"juhefuwu/app/merge/handler"
 	proto "juhefuwu/proto/merge"
@@ -22,8 +23,10 @@ func main() {
 		// registry interval
 		// wrapper
 
+
 		// 添加 hystrix 熔断机制
 		micro.WrapClient(wrapper.NewHystrixWrapper),
+
 		)
 
 	server.Init()

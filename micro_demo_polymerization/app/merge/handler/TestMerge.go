@@ -3,11 +3,13 @@ package handler
 import (
 	"context"
 	"encoding/json"
+
 	"juhefuwu/proto/sub"
 	"juhefuwu/proto/sum"
 	"log"
 
 	proto "juhefuwu/proto/merge"
+
 )
 
 func (s merge)TestMerge(ctx context.Context,req *proto.TestMergeReq,res *proto.TestMergeRes)error{
@@ -38,15 +40,11 @@ func (s merge)TestMerge(ctx context.Context,req *proto.TestMergeReq,res *proto.T
 }
 
 
-
-
-
-
-
 func serializeJson(data interface{}) string{
 	b,_ := json.Marshal(data)
 	return string(b)
 }
+
 
 
 
