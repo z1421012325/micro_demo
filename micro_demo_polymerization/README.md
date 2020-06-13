@@ -84,8 +84,6 @@ result
 
 ```
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -128,7 +126,3 @@ micro registry    -- 默认8000端口开启
 
 
 
-
-
-
->>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
