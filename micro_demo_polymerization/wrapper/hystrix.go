@@ -112,12 +112,19 @@ func NewHystrixWrapper(client client.Client) client.Client{
 
 
 
+<<<<<<< HEAD
 // proto返回数据时定义为数字,所以有两个版本,一个返回proto定义接口数据,一个返回生产时异常数据
+=======
+// proto返回数据时定义为数字,所以模拟有两个版本,一个返回proto定义接口数据,一个返回生产时异常数据
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 //func HystrixCommonErrData(res interface{}) {
 //	// res.(*int)  res无法直接赋予属性
 //	res = nil
 //}
+<<<<<<< HEAD
 
+=======
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 func HystrixCommonErrData(res interface{}) {
 	result := res.(*merge.TestMergeRes)
 	result.Number = -999

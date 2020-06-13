@@ -3,13 +3,19 @@ package handler
 import (
 	"context"
 	"encoding/json"
+<<<<<<< HEAD
 
+=======
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 	"juhefuwu/proto/sub"
 	"juhefuwu/proto/sum"
 	"log"
 
 	proto "juhefuwu/proto/merge"
+<<<<<<< HEAD
 
+=======
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 )
 
 func (s merge)TestMerge(ctx context.Context,req *proto.TestMergeReq,res *proto.TestMergeRes)error{
@@ -40,6 +46,14 @@ func (s merge)TestMerge(ctx context.Context,req *proto.TestMergeReq,res *proto.T
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 func serializeJson(data interface{}) string{
 	b,_ := json.Marshal(data)
 	return string(b)
@@ -50,4 +64,7 @@ func serializeJson(data interface{}) string{
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)

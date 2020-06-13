@@ -84,3 +84,51 @@ result
 
 ```
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+集成其他语言 web api
+````shell script
+需要开启micro的注册网关
+micro registry    -- 默认8000端口开启
+
+来源:http://www.jtthink.com/course/play/2113  
+
+注册需要发送请求,参数为:
+{
+	name string
+	version string
+	metadata 
+	endpoints []Endpoint
+	nodes []Node
+	options Options {
+		ttl int64
+	}
+}
+
+注销注册请求参数为:
+{
+	name string
+	version string
+	metadata 
+	endpoints []Endpoint
+	nodes []Node
+	options Options {
+		ttl int64
+	}
+}
+
+
+````
+
+
+
+
+
+
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)

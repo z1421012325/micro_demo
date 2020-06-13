@@ -1,13 +1,21 @@
 package main
 
 import (
+<<<<<<< HEAD
 
+=======
+	"github.com/micro/go-micro"
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 	"juhefuwu/app"
 	"juhefuwu/app/merge/handler"
 	proto "juhefuwu/proto/merge"
 	"juhefuwu/wrapper"
 
+<<<<<<< HEAD
 	"github.com/micro/go-micro"
+=======
+	"github.com/micro/go-micro/client/selector"
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 )
 
 func main() {
@@ -18,16 +26,33 @@ func main() {
 		//	网关执行命令 micro api --namespace=com.example.www
 		// 	网关则只会执行服务名为 com.example.www 前缀的服务
 		micro.Name(app.MergerServerName),
+<<<<<<< HEAD
+=======
+
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 		// registry
 		// registry ttl
 		// registry interval
 		// wrapper
 
+<<<<<<< HEAD
 
 		// 添加 hystrix 熔断机制
 		micro.WrapClient(wrapper.NewHystrixWrapper),
 
 		)
+=======
+		// 添加 hystrix 熔断机制,log
+		micro.WrapClient(wrapper.NewHystrixWrapper,
+			wrapper.NewLogWrapper),
+
+		// 服务选择 轮询
+		micro.Selector(selector.NewSelector(
+			//selector.Registry(etcd),
+			selector.SetStrategy(selector.RoundRobin),
+		)),
+	)
+>>>>>>> add logwrapper,registry selector func in round robin:新增log中间件和服务地址选择器改为轮询(pass:本来就是轮询...)
 
 	server.Init()
 
