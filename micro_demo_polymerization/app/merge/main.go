@@ -32,6 +32,10 @@ func main() {
 		// 添加 hystrix 熔断机制,log
 		micro.WrapClient(wrapper.NewHystrixWrapper,
 			wrapper.NewLogWrapper),
+			
+		// 添加限流limiter机制
+		micro.WrapClient(wrapper.NewRateWrapperWrapper),
+
 
 		// 服务选择 轮询
 		micro.Selector(selector.NewSelector(
